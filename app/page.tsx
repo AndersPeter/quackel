@@ -1,65 +1,129 @@
+// ✅ Next.js 14 + Tailwind Portfolio Template (Improved Layout)
+// Images placed under "In development" headings
+
 import Image from "next/image";
+
+export const metadata = {
+  title: "Quackel.dk – Indie Game Developer | Anders Peter Sørensen",
+  description:
+    "Indie game developer portfolio. Anders Peter Sørensen builds games in Godot and creates 3D assets. Projects: Neon Grind and Snotty Trollz.",
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+    <main className="bg-[#0b0f1a] text-white min-h-screen">
+      {/* HERO */}
+      <section className="max-w-6xl mx-auto px-6 py-24 text-center">
+        <h1 className="text-5xl font-bold mb-6">Anders Peter Sørenen</h1>
+        <h2 className="text-3xl font-bold mb-6">Indie Game Developer & 3D Artist</h2>
+        <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
+          Jeg bygger spil med fokus på humor og laver 3d modeller med kant.
+        </p>
+        <div className="flex gap-4 justify-center">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#projects"
+            className="bg-cyan-500 px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            Se projekter
           </a>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
+            className="border border-white/20 px-6 py-3 rounded-2xl hover:bg-white/10 transition"
           >
-            Documentation
+            Kontakt
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section id="projects" className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-semibold mb-10">Projekter</h2>
+
+        <div className="grid md:grid-cols-2 gap-10">
+          {/* Neon Grind */}
+          <div className="bg-white/5 rounded-2xl p-6 hover:bg-white/10 transition">
+            <h3 className="text-xl font-semibold">Neon Grind</h3>
+            <p className="text-sm text-cyan-400 mb-4">In development</p>
+
+            <div className="relative w-full h-[260px] mb-4">
+              <Image
+                src="/Neon.jpeg"
+                alt="Neon Grind indie game gameplay – futuristic tunnel runner in Godot"
+                fill
+                priority
+                className="rounded-xl object-cover"
+              />
+            </div>
+
+            <p className="text-gray-300">
+              Hurtigt, reaktionsbaseret spil i futuristisk neon synth space med
+              fokus på flow og timing.
+            </p>
+          </div>
+
+          {/* Snotty Trollz */}
+          <div className="bg-white/5 rounded-2xl p-6 hover:bg-white/10 transition">
+            <h3 className="text-xl font-semibold">Snotty Trollz</h3>
+            <p className="text-sm text-cyan-400 mb-4">In development</p>
+
+            <div className="relative w-full h-65 mb-4">
+              <Image
+                src="/snotty.jpeg"
+                alt="Snotty Trollz indie game gameplay – funny troll game"
+                fill
+                className="rounded-xl object-cover"
+              />
+            </div>
+
+            <p className="text-gray-300">
+              Børnespil med snottede trolde, som kun øsnker sig en snottet
+              snack.
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* 3D models */}
+      <section id="projects" className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-semibold mb-10">3D modeller</h2>
+
+        <div className="grid md:grid-cols-2 gap-10">
+          {/* Asset Pack */}
+          <div className="bg-white/5 rounded-2xl p-6 hover:bg-white/10 transition">
+            <h3 className="text-xl font-semibold">Asset pack</h3>
+            <p className="text-sm text-cyan-400 mb-4">In development</p>
+
+            <div className="relative w-full h-[260px] mb-4">
+              <Image
+                src="/Crate.png"
+                alt="Sci-fi crate"
+                fill
+                priority
+                className="rounded-xl object-cover"
+              />
+            </div>
+
+            <p className="text-gray-300">
+              Første asset til en assset pack.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="max-w-4xl mx-auto px-6 py-20 text-center"
+      >
+        <h2 className="text-3xl font-semibold mb-6">Kontakt</h2>
+        <p className="text-gray-300 mb-4">contact@quackel.dk</p>
+        <a
+          href="mailto:contact@quackel.dk"
+          className="bg-cyan-500 px-6 py-3 rounded-2xl hover:scale-105 transition"
+        >
+          Send mail
+        </a>
+      </section>
+    </main>
   );
 }

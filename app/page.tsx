@@ -103,7 +103,7 @@ export default function Home() {
             </div>
 
             <p className="text-gray-300">
-              Første asset til en assset pack.
+              Første asset til en asset pack.
             </p>
           </div>
 

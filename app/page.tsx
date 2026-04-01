@@ -76,8 +76,8 @@ export default function Home() {
             </div>
 
             <p className="text-gray-300">
-              Børnespil med snottede trolde, som kun øsnker sig en snottet
-              snack. 
+              Børnespil med snottede trolde, som kun ønsker sig en snottet
+              snack.
             </p>
           </div>
         </div>
